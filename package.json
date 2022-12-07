@@ -1,0 +1,22 @@
+{
+  "name": "11-cafeteria",
+  "version": "1.0.0",
+  "description": "Aprendiendo sass, gulp, css grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianps1988/11-cafeteria.git"
+  },
+  "author": "Cristian Peña",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristianps1988/11-cafeteria/issues"
+  },
+  "homepage": "https://github.com/cristianps1988/11-cafeteria#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
