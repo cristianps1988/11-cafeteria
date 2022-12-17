@@ -367,7 +367,7 @@ ul {
   background-color: red;
 }
 
-h1, h2, h3 {
+h1, h2, .heading-blanco, h3 {
   margin: 0 0 5rem 0;
 }
 
@@ -375,17 +375,18 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
+h2, .heading-blanco {
+  text-align: center;
   font-size: 3.6rem;
   color: #5e311e;
   text-transform: uppercase;
 }
-h2 span {
+h2 span, .heading-blanco span {
   color: #c39c63;
   display: block;
   font-size: 2rem;
 }
-h2::after {
+h2::after, .heading-blanco::after {
   content: "";
   display: block;
   width: 10rem;
@@ -393,6 +394,16 @@ h2::after {
   background-image: url(/build/img/cafe.svg);
   margin: 0 auto;
   background-size: 10rem;
+}
+
+.heading-blanco {
+  color: #FFF;
+}
+.heading-blanco span {
+  color: #FFF;
+}
+.heading-blanco::after {
+  display: none;
 }
 
 h3 {
@@ -618,4 +629,60 @@ h3 {
 }
 .galeria .imagen:nth-child(10) img {
   width: 100%;
+}
+
+.nuestro-menu {
+  background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), -webkit-gradient(linear, left bottom, left top, from(#5e311e), to(#5e311e));
+  background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, #5e311e, #5e311e);
+  background-repeat: no-repeat;
+  background-position: center 5rem, center 95%, 100%;
+  padding: 15rem 2rem 20rem 2rem;
+  background-size: 200%;
+}
+@media (min-width: 768px) {
+  .nuestro-menu {
+    padding: 15rem 5rem 20rem 5rem;
+    background-size: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .nuestro-menu {
+    background-size: 50%, 50%, 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.menu h3 {
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu li p {
+  color: #FFF;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+.menu li p span {
+  display: block;
+  color: #c39c63;
+}
+.menu li .precio {
+  font-size: 4rem;
+  font-weight: 700;
 }
