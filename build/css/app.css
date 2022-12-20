@@ -457,6 +457,18 @@ h3 {
   background-image: url(/build/img/header_proceso.jpg);
 }
 
+.header-menu {
+  background-image: url(/build/img/header_menu.jpg);
+}
+
+.header-galeria {
+  background-image: url(/build/img/header_galeria.jpg);
+}
+
+.header-contacto {
+  background-image: url(/build/img/header_contacto.jpg);
+}
+
 .nav-principal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,4 +861,31 @@ h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.contenido-menu {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/5;
+}
+@media (min-width: 768px) {
+  .contenido-menu {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 1024px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-position: bottom right;
+    background-size: 40%;
+  }
+}
+
+.texto p {
+  font-size: 2rem;
 }
