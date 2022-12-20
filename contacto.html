@@ -40,25 +40,35 @@
             <form>
                 <div class="campo">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Tu nombre">
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
                 </div>
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Tu email">
+                    <input type="email" id="email" placeholder="Tu email" required>
                 </div>
                 <div class="campo">
                     <label for="personas">numero de personas</label>
-                    <input type="" id="personas">
+                    <select name="personas" id="personas" required>
+                        <option disabled selected value="">- Seleccione -</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">4</option>
+                        <option value="4">6</option>
+                        <option value="5">8</option>
+                        <option value="">10</option>
+                    </select>
                 </div>
                 <div class="campo">
                     <label for="hora">hora</label>
-                    <input type="time" id="hora" ">
+                    <input type="time" id="hora" min="09:00" max="18:00">
                 </div>
                 <div class="campo">
                     <label for="fecha">fecha</label>
-                    <input type="date" id="fecha" ">
+                    <input type="date" id="fecha" required>
                 </div>
-                <input type="button" value="ENVIAR">
+                <div class="campo">
+                    <input class="btn" type="submit" value="ENVIAR">
+                </div>
             </form>
         </div>
     </main>

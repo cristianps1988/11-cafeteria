@@ -1,3 +1,37 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+.contenido-contacto{
+    .campo{
+        margin-bottom: 1rem;
+        label{
+            text-transform: uppercase;
+            line-height: 2;
+            font-weight: 700;
+        }
+        select,
+        input{
+            width: 100%;
+            border: 3px solid v.$primario;
+            height: 4rem;
+        }
+        .btn{
+            background-color: v.$primario;
+            color: v.$blanco;
+            border: none;
+            &:hover{
+                cursor: pointer;
+                background-color: v.$secundario;
+            }
+        }
+    }
+    
+    @include m.desktop { 
+        @include m.grid(2, v.$separacion);
+        background-image: url(../img/granos_cafe.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom right;    
+        aspect-ratio: 16/6;
+        background-size: 40%;
+    }
+}
